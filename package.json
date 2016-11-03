@@ -1,0 +1,31 @@
+{
+  "name": "listenys",
+  "version": "1.0.2",
+  "description": "a test",
+  "main": "app.js",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "eventproxy": "^0.3.5",
+    "express": "^4.14.0",
+    "superagent": "^2.3.0",
+    "utility": "^1.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "111",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Listenys/LearnNodeJS.git"
+  },
+  "keywords": [
+    "learn"
+  ],
+  "author": "listenys",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Listenys/LearnNodeJS/issues"
+  },
+  "homepage": "https://github.com/Listenys/LearnNodeJS#readme"
+}
