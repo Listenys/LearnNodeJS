@@ -28,6 +28,11 @@ superagent.get(condeUrl).end(function(err,sres){
 			var topicUrl = topicPair[0];
 			var topicHtml =topicPair[1];
 			var $ = cheerio.load(topicHtml);
+			items.push({
+				title:$('.topic_full_title').text().trim(),
+				href: topicUrl,
+				comment1: $('.reply_content').eq(0).text().trim()
+			});
 			return({
 				title: $('.topic_full_title').text().trim(),
 				href: topicUrl,
@@ -35,6 +40,7 @@ superagent.get(condeUrl).end(function(err,sres){
 			});
 		});
 		console.log(topics);
+		res.send(topics);
 	});
 	topicUrls.forEach(function(topicUrl){
 		superagent.get(topicUrl).end(function(err,sres){
@@ -42,7 +48,6 @@ superagent.get(condeUrl).end(function(err,sres){
 			ep.emit('topic_html',[topicUrl,sres.text]);
 		});
 	});
-	sres.send('Hello World');
 });
 
 });
